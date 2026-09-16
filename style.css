@@ -1,0 +1,118 @@
+
+:root {
+  --color-cream: #F5EDE0;      /* фон сторінки */
+  --color-brown-dark: #3A2419; /* темно-коричневий, для тексту й підвалу */
+  --color-brown: #6B4226;      /* основний коричневий */
+  --color-gold: #C9A227;       /* золотавий акцент, для кнопок */
+  --color-white: #FFFFFF;
+}
+
+/* ===== Скидання стандартних відступів =====
+   У браузера є "стандартні" відступи в елементів (body, h1, ul...).
+   Ми їх обнуляємо, щоб самим контролювати всі відступи. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* щоб padding не збільшував ширину елемента */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-brown-dark);
+}
+
+/* ===== Шапка (header) ===== */
+.header {
+  display: flex;              /* елементи в ряд */
+  align-items: center;        /* вирівняти по вертикалі по центру */
+  justify-content: space-between; /* розкидати по краях: лого - меню - кнопка */
+  padding: 16px 40px;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); /* легка тінь знизу */
+}
+
+.header__logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-brown);
+}
+
+.header__nav {
+  display: flex;
+  gap: 28px; /* відстань між посиланнями */
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: var(--color-brown-dark);
+  font-size: 15px;
+}
+
+.header__nav a:hover {
+  color: var(--color-gold);
+}
+
+.header__cart-btn {
+  background-color: var(--color-brown-dark);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header__cart-btn:hover {
+  background-color: var(--color-brown);
+}
+
+/* ===== Hero-секція ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 40px;
+}
+
+.hero__text {
+  flex: 1; /* займає доступний простір зліва */
+}
+
+.hero__title {
+  font-size: 42px;
+  line-height: 1.3;
+  color: var(--color-brown-dark);
+  margin-bottom: 24px;
+}
+
+.hero__btn {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.hero__btn:hover {
+  opacity: 0.9;
+}
+
+/* Тимчасовий "заглушка"-блок замість фото.
+   Коли матимеш реальне фото — заміниш на
+   background-image або тег <img>. */
+.hero__image {
+  flex: 1;
+  height: 320px;
+  background-color: #E4D5BC;
+  border: 2px dashed var(--color-brown);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brown);
+  font-size: 16px;
+}
