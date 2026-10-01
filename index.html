@@ -6,13 +6,13 @@
   <title>AromaCraft Coffee — кавовий магазин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="header">
-    <div class="header__logo">☕ AromaCraft</div>
+    <div class="header__logo">♨️ AromaCraft</div>
 
     <nav class="header__nav">
       <a href="#">Головна сторінка</a>
@@ -39,23 +39,85 @@
 
       <div class="category-card">
         <h3>Мелена кава</h3>
-        <img src="" alt="Мелена кава">
+        <img src="images/ground-coffee.jpg" alt="Мелена кава">
         <p>Помел для джезви, еспресо, френч-прес</p>
         <button type="button" class="category_btn">Детальніше</button>
       </div>
 
       <div class="category-card">
         <h3>Кава в зернах</h3>
-        <img src="" alt="Кава в зернах">
+        <img src="images/coffee-beans.jpg" alt="Кава в зернах">
         <p>Відібрані сорти зі всього світу</p>
         <button type="button" class="category_btn">Детальніше</button>
       </div>
 
       <div class="category-card">
         <h3>Дріп-пакети</h3>
-        <img src="" alt="Дріп-пакети">
+        <img src="images/drip-coffee.jpg" alt="Дріп-пакети">
         <p>Дріп-пакети, еспресо, френч-прес</p>
         <button type="button" class="category_btn">Детальніше</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Найчастіше замовляють</h2>
+
+    <div class="products-grid">
+
+      <div class="product-item">
+        <span class="product-badge">ORGANIC</span>
+        <img src="images/aromacraft-whole-beans.jpg" alt="AROMACRAFT Whole Coffee Beans" class="product-item__image">
+        <h3 class="product-item__title">AROMACRAFT Whole Coffee Beans</h3>
+        <p class="product-item__subtitle">100% Арабіка (Зернова)</p>
+        <p class="product-item__notes">Ноти темного шоколаду, карамелі та фундука</p>
+        <button class="product-item__btn">В КОШИК</button>
+      </div>
+
+      <div class="product-item">
+        <span class="product-badge product-badge--gold">100% Арабіка</span>
+        <img src="images/aromacraft-fresh-ground.jpg" alt="AROMACRAFT Fresh Ground Coffee" class="product-item__image">
+        <h3 class="product-item__title">AROMACRAFT Fresh Ground Coffee</h3>
+        <p class="product-item__subtitle">100% Арабіка (Свіжомелена)</p>
+        <p class="product-item__notes">Оксамитовий смак з нотами какао, прянощів та стиглої вишні</p>
+        <button class="product-item__btn">В КОШИК</button>
+      </div>
+
+      <div class="product-item">
+        <span class="product-badge product-badge--gold">PREMIUM</span>
+        <img src="images/aromacraft-drip-coffee.jpg" alt="AROMACRAFT Premium Drip Coffee" class="product-item__image">
+        <h3 class="product-item__title">AROMACRAFT Premium Drip Coffee</h3>
+        <p class="product-item__subtitle">Зерновий мікс у дріп-пакетах</p>
+        <p class="product-item__notes">Збалансована чашка з нотами тропічних фруктів, ванілі та цитрусу</p>
+        <button class="product-item__btn">В КОШИК</button>
+      </div>
+
+      <div class="product-item">
+        <span class="product-badge">SPECIAL SELECTION</span>
+        <img src="images/aromacraft-aromatic-ground.jpg" alt="AROMACRAFT Aromatic Ground Coffee" class="product-item__image">
+        <h3 class="product-item__title">AROMACRAFT Aromatic Ground Coffee</h3>
+        <p class="product-item__subtitle">Авторський купаж (Мелена)</p>
+        <p class="product-item__notes">Насичений аромат з нотами сухофруктів, мускатного горіха та меду</p>
+        <button class="product-item__btn">В КОШИК</button>
+      </div>
+      
+      <div class="product-item">
+        <span class="product-badge">LIMITED EDITION</span>
+        <img src="images/aromacraft-cold-brew.jpg" alt="AROMACRAFT Nitro Cold Brew" class="product-item__image">
+        <h3 class="product-item__title">AROMACRAFT Nitro Cold Brew</h3>
+        <p class="product-item__subtitle">Готовий кавовий напій (Банка)</p>
+        <p class="product-item__notes">Шовковистий холодний бленд з кремовою пінкою та нотами молочного шоколаду</p>
+        <button class="product-item__btn">В КОШИК</button>
+      </div>
+
+      <div class="product-item">
+        <span class="product-badge">DECAF</span>
+        <img src="images/aromacraft-decaf.jpg" alt="AROMACRAFT Decaf Espresso Blend" class="product-item__image">
+        <h3 class="product-item__title">AROMACRAFT Decaf Espresso Blend</h3>
+        <p class="product-item__subtitle">Без кофеїну (Еспресо мелена)</p>
+        <p class="product-item__notes">Ноти темного шоколаду та сухофруктів</p>
+        <button class="product-item__btn">В КОШИК</button>
       </div>
 
     </div>

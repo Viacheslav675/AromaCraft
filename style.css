@@ -13,15 +13,16 @@
   --btn-gold-bg: #ce9539;    /* золотаво-гірчична кнопка */
   --btn-gold-text: #FFFFFF;  /* білий текст на кнопці */
   --card-bg: #FFFFFF;        /* білий фон карток */
+  --badge-green: #8FA382;   /* зелений для Organic */
+  --badge-gold: #C09B53;    /* золотистий для 100% Арабіка / Premium */
+  --text-white: #FFFFFF;     /* білий колір для бейджиків */
 }
 
-/* ===== Скидання стандартних відступів =====
-   У браузера є "стандартні" відступи в елементів (body, h1, ul...).
-   Ми їх обнуляємо, щоб самим контролювати всі відступи. */
+/* ===== Скидання стандартних відступів ===== */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* щоб padding не збільшував ширину елемента */
+  box-sizing: border-box;
 }
 
 body {
@@ -32,12 +33,12 @@ body {
 
 /* ===== Шапка (header) ===== */
 .header {
-  display: flex;              /* елементи в ряд */
-  align-items: center;        /* вирівняти по вертикалі по центру */
-  justify-content: space-between; /* розкидати по краях: лого - меню - кнопка */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px 40px;
   background-color: var(--header-bg);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); /* легка тінь знизу */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .header__logo {
@@ -48,7 +49,7 @@ body {
 
 .header__nav {
   display: flex;
-  gap: 28px; /* відстань між посиланнями */
+  gap: 28px;
 }
 
 .header__nav a {
@@ -78,28 +79,27 @@ body {
   color: var(--header-text-hover);
 }
 
+/* ===== Hero Баннер ===== */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero-bg.jpg');
-  background-size: cover;       /* Розтягує фонову картинку на весь блок без спотворень */
-  background-position: center;  /* Центрує зображення */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  
   width: 100%;
-  min-height: 500px;            /* Висота баннера (налаштуйте під свій макет) */
-  
+  min-height: 500px;
   display: flex;
-  align-items: center;         
-  padding: 0 80px;         
+  align-items: center;
+  padding: 0 80px;
 }
 
-.hero__content {
+.hero__text {
   max-width: 500px;
 }
 
 .hero__title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 48px;
-  color: #ffffff;               /* Білий колір для гарного контрасту */
+  color: #ffffff;
   line-height: 1.2;
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -122,6 +122,7 @@ body {
   opacity: 0.9;
 }
 
+/* ===== Категорії (categories) ===== */
 .categories {
   padding: 60px 40px;
 }
@@ -130,7 +131,7 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 34px;
   font-weight: 700;
-  letter-spacing: 2px; 
+  letter-spacing: 2px;
   text-align: center;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -139,27 +140,10 @@ body {
 
 .category-conteiner {
   display: flex;
-  align-items: center;
+  align-items: stretch; /* Вирівнює всі картки категорій по висоті */
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.category-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 25px;
-  font-weight: 600;
-  text-transform: uppercase; 
-  color: var(--text-primary);
-  margin-bottom: 12px;
-}
-
-.category-card p {
-  font-family: 'Segoe UI', Arial, sans-serif; 
-  font-size: 15px;
-  color: var(--text-primary);
-  opacity: 0.85;
-  line-height: 1.4;
 }
 
 .category-card {
@@ -172,28 +156,163 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+}
+
+.category-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 12px;
 }
 
 .category-card img {
   width: 100%;
   height: 180px;
-  object-fit: cover;       /* Зображення красиво заповнює блок без спотворень */
+  object-fit: cover;
   border-radius: 10px;
   margin: 15px 0;
+}
+
+.category-card p {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 15px;
+  color: var(--text-primary);
+  opacity: 0.85;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Виштовхує кнопку внизу */
 }
 
 .category_btn {
   background-color: var(--btn-gold-bg);
   color: var(--btn-gold-text);
   border: none;
-  padding: 14px 125px;
+  padding: 14px 0;
+  width: 100%;
   border-radius: 15px;
   font-size: 15px;
   cursor: pointer;
   transition: opacity 0.3s;
+  margin-top: auto;
 }
 
 .category_btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== Товари (products) ===== */
+.products {
+  padding: 60px 40px;
+}
+
+.products h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 34px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.product-badge {
+  background-color: var(--badge-green);
+  color: var(--text-white);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+
+.product-badge--gold {
+  background-color: var(--badge-gold);
+}
+
+.product-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.product-item h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin: 8px 0;
+  text-align: center;
+}
+
+.product-item p {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  opacity: 0.85;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.product-item__notes {
+  margin-bottom: 16px;
+  flex-grow: 1; /* Забезпечує однакову висоту та нижню лінію кнопок */
+}
+
+.product-item__btn {
+  background-color: var(--btn-gold-bg);
+  color: var(--btn-gold-text);
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  margin-top: auto;
+}
+
+.product-item__btn:hover {
   opacity: 0.9;
 }
