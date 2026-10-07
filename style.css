@@ -316,3 +316,114 @@ body {
 .product-item__btn:hover {
   opacity: 0.9;
 }
+
+
+/* ===== Підвал (Footer) ===== */
+.footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 40px;
+  margin-top: 60px;
+  border-top: 1px solid #3E2419;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-container h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 450;
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-list li {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: var(--header-text);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-list a:hover {
+  color: var(--header-text-hover);
+}
+
+.footer-heading-4 p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-subscribe-form input[type="email"] {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 14px;
+  border: 1px solid #aa8370;
+  background-color: #251610;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.footer-subscribe-form input[type="submit"] {
+  background-color: var(--btn-gold-bg);
+  color: var(--btn-gold-text);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.footer-subscribe-form input[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  border-top: 1px solid #8a671b;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
