@@ -15,7 +15,7 @@
   <header class="header">
     <div class="header__logo">♨️ AromaCraft</div>
 
-    <nav class="header__nav">
+    <nav class="header__nav" id="nav">
       <a href="#">Головна сторінка</a>
       <a href="#">Кава</a>
       <a href="#">Про нас</a>
@@ -23,7 +23,17 @@
       <a href="#">Профіль</a>
     </nav>
 
-    <button class="header__cart-btn">🛒 Кошик</button>
+    <div class="header__actions">
+      <button class="header__cart-btn" aria-label="Кошик">
+        🛒 <span class="header__cart-text">Кошик</span>
+      </button>
+
+      <button class="header__burger" id="burger" aria-label="Відкрити меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
   
   <main>
@@ -37,7 +47,7 @@
     <section class="categories">
       <h2 class="category_title">Категорії товарів</h2>
 
-      <div class="category-conteiner">
+      <div class="category-container">
 
         <div class="category-card">
           <h3>Мелена кава</h3>
@@ -130,7 +140,7 @@
     <div class="footer-container">
 
       
-      <div class="footer-heading-1">
+      <div class="footer-column">
         <h2>Контакти</h2>
         <ul class="footer-list">
           <li>Телефон: +380 123 456 789</li>
@@ -141,7 +151,7 @@
       </div>
 
       
-      <div class="footer-heading-2">
+      <div class="footer-column">
         <h2>Навігація</h2>
         <ul class="footer-list">
           <li><a href="index.html">Головна</a></li>
@@ -153,7 +163,7 @@
       </div>
 
       
-      <div class="footer-heading-3">
+      <div class="footer-column">
         <h2>Соціальні мережі</h2>
         <ul class="footer-list">
           <li><a href="https://www.facebook.com/aromacraft" target="_blank">Facebook</a></li>
@@ -179,6 +189,6 @@
       <p>&copy; 2026 AromaCraft Coffee. Усі права захищені.</p>
     </div>
   </footer> 
-
+  <script src="script.js"></script>
 </body>
 </html>
